@@ -3,7 +3,7 @@ build
 test
 src/**.js
 .idea/*
-
+src/tes.tes
 coverage
 .nyc_output
 *.log

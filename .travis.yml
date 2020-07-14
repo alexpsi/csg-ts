@@ -8,5 +8,5 @@ cache:
     - '$HOME/.npm'
 after_success:
   - npm run cov:send
-  - npm run cov:check
+  # - npm run cov:check # not yet
   - npm run semantic-release

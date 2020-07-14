@@ -1,5 +1,3 @@
-// tslint:disable: ordered-imports object-literal-sort-keys
-
 export interface Vector {
   readonly x: number;
   readonly y: number;
@@ -29,8 +27,6 @@ export const times = (a: Vector, n: number): Vector => ({
   z: a.z * n,
   metadata: a.metadata
 });
-
-// tslint:disable: ordered-imports object-literal-sort-keys
 
 export const dividedBy = (a: Vector, n: number): Vector => ({
   x: a.x / n,

@@ -1,6 +1,6 @@
-import { Vector, times, plus } from './vector';
-import { Polygon, createPolygon } from './polygon2';
+import { createPolygon, Polygon } from './polygon';
 import { flatten } from './utils';
+import { plus, times, Vector } from './vector';
 
 interface Options {
   readonly center?: Vector;
@@ -26,7 +26,8 @@ export const sphereVertex = (
 };
 
 export const createSphere = (opts?: Options): readonly Polygon[] => {
-  const { center = { x: 0, y: 0, z: 0 }, radius = 1, slices = 16, stacks = 8 } = opts || {};
+  const { center = { x: 0, y: 0, z: 0 }, radius = 1, slices = 16, stacks = 8 } =
+    opts || {};
   return flatten(
     Array(slices)
       .fill(0)

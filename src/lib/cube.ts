@@ -1,5 +1,5 @@
+import { createPolygon, Polygon } from './polygon';
 import { Vector } from './vector';
-import { Polygon, createPolygon } from './polygon2';
 
 export const createCube = (options?: {
   readonly center?: Vector;
@@ -17,10 +17,10 @@ export const createCube = (options?: {
   ].map(({ positions }) =>
     createPolygon(
       positions.map(i => ({
-          x: !!(i & 1) ? c.x + r.x : c.x + r.x * -1,
-          y: !!(i & 2) ? c.y + r.y : c.y + r.y * -1,
-          z: !!(i & 4) ? c.z + r.z : c.z + r.z * -1
-        }))
+        x: !!(i & 1) ? c.x + r.x : c.x + r.x * -1,
+        y: !!(i & 2) ? c.y + r.y : c.y + r.y * -1,
+        z: !!(i & 4) ? c.z + r.z : c.z + r.z * -1
+      }))
     )
   );
 };

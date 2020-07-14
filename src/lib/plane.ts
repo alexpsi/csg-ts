@@ -1,6 +1,4 @@
-// tslint:disable: ordered-imports object-literal-sort-keys
-
-import { Vector, cross, minus, unit, dot, negated } from './vector';
+import { cross, dot, minus, negated, unit, Vector } from './vector';
 
 export interface Plane {
   readonly normal: Vector;
